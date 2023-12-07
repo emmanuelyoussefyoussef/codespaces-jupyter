@@ -1,6 +1,6 @@
-Zahl1 = int(input("Geben Sie ihre erste Zahl ein:"));
-Zahl2 = int(input("Geben Sie ihre zweite Zahl ein:"));
+Zahl1 = int(input("Geben Sie ihre erste Zahl ein:"))
+Zahl2 = int(input("Geben Sie ihre zweite Zahl ein:"))
 
-print(Zahl1 * Zahl2);
+print(Zahl1 * Zahl2)
 
-print("Hello Youssef");
+print("Hello Youssef")

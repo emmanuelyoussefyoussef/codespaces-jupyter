@@ -4,3 +4,4 @@ print("hi")
 print(Zahl1 * Zahl2)
 
 print("Hello Youssef")
+print("Thats a discord test")

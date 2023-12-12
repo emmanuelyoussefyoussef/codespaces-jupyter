@@ -38,4 +38,7 @@ print("Schlechtester wurf:",minP)
 
 print("Durschschnittliche Punktzahl:",mittelP)
 
-
+countdown = []
+for i in range(10):
+    countdown[i]=i
+print(countdown)

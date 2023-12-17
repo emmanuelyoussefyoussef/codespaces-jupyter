@@ -22,9 +22,12 @@ for x in range(groesse):
     #Sterne anz7ahl erhöht sich jeden durchlauf
     zwischenspeicher = zwischenspeicher + 2
     #Delay
-    time.sleep(0.2)
+    time.sleep(0.5)
     #Neue schleife die den Ast printet
     if x == groesse-1:
-        print(" " *(groesse), "*")
-        print(" " *(groesse), "*")
-        time.sleep(1)
+        if groesse > 4:
+            print(" " *(groesse), "*")
+            print(" " *(groesse), "*")
+            time.sleep(1)
+        else :
+            print(" " *(groesse), "*")

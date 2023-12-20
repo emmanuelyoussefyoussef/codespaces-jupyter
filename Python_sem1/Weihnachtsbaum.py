@@ -31,3 +31,4 @@ for x in range(groesse):
             time.sleep(1)
         else :
             print(" " *(groesse), "*")
+            time.sleep(1)

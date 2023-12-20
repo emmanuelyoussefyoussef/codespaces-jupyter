@@ -2,6 +2,8 @@
 #Start Drawing with D and stop with C
 #Clear drawing with space
 
+#TO DO STOP WITH S AND RUN WITH A LINES 27&28
+
 from turtle import Turtle, Screen
 turtle_size=20
 skk = Turtle(shape="turtle", visible=True)

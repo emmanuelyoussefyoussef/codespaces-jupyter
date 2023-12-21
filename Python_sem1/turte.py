@@ -13,14 +13,17 @@ Scr = Screen()
 Scr.bgcolor("beige")
 skk.speed(10)
 skk.penup()
-color= ["red","blue","black","green","cyan","magenta"]
+
+color1= ["red","blue","black","green","cyan","magenta"]
 def moving():
     skk.forward(7)
     Scr.ontimer(moving,50)
 
+random2= "black"
+def color():
+    random2= random.choice(color1)
+    skk.pencolor(random2)
 
-random = random.choice(color)
-skk.pencolor(random)
 
 Scr.onkey(lambda: skk.setheading(90), 'Up')
 Scr.onkey(lambda: skk.setheading(270), 'Down')
@@ -35,5 +38,9 @@ Scr.onkey(lambda: skk.clear(), 'space')
 Scr.listen()
 
 moving()
-
+color()
 Scr.mainloop()
+
+
+
+

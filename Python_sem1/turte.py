@@ -41,7 +41,7 @@ Scr.onkey(lambda: skk.setheading(270), 'Down')
 Scr.onkey(lambda: skk.setheading(0),'Right')
 Scr.onkey(lambda: skk.setheading(180),'Left')
 Scr.onkey(lambda: skk.penup(),'c')
-Scr.onkey(lambda: (skk.pendown(),color()), 'd')
+Scr.onkey(lambda: (skk.pendown(),colorp1()), 'd')
 Scr.onkey(lambda: skk.clear(), 'space')
 
 
@@ -65,6 +65,14 @@ def check_key_pressedp2(key):
     elif key==',':
          runningp2=True
          movingp2()
+def colorp2():
+    random2= "black"
+    random2= random.choice(color1)
+    pla2.pencolor(random2)
+
+Scr.onkey(lambda: pla2.penup(),'n')
+Scr.onkey(lambda: (pla2.pendown(),colorp2()), 'm')
+Scr.onkey(lambda: pla2.clear(), 'space')
 
 Scr.onkey(lambda: pla2.setheading(90), '8')
 Scr.onkey(lambda: pla2.setheading(270), '2')
@@ -77,7 +85,7 @@ Scr.onkey(lambda: check_key_pressedp2(','),',')
 
 color1= ["red","blue","black","green","cyan","magenta"]
 
-def color():
+def colorp1():
     random2= "black"
     random2= random.choice(color1)
     skk.pencolor(random2)
@@ -87,6 +95,7 @@ def color():
 Scr.listen()
 movingp1()
 movingp2()
-color()
+colorp1()
+colorp2()
 
 Scr.mainloop()

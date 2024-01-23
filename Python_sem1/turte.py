@@ -43,6 +43,14 @@ Scr.onkey(lambda: skk.setheading(180),'Left')
 Scr.onkey(lambda: skk.penup(),'c')
 Scr.onkey(lambda: (skk.pendown(),colorp1()), 'd')
 Scr.onkey(lambda: skk.clear(), 'space')
+#Hindersin
+ob1 = Turtle(shape="square")
+ob1.color("black")
+ob1.penup()
+ob1.setx(0)
+ob1.sety(100)
+ob1.shapesize(stretch_wid=1, stretch_len=10)
+
 
 
 #player 2

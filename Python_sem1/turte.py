@@ -11,19 +11,24 @@ import keyboard
 
 #player 1
 turtle_size=20
-skk = Turtle(shape="turtle", visible=True)
+pla1 = Turtle(shape="turtle", visible=True)
 Scr = Screen()
 Scr.bgcolor("beige")
-skk.speed(10)
-skk.penup()
+pla1.speed(10)
+pla1.penup()
 runningp1=False
-skk.setx(-250)
-skk.sety(250)
+pla1.setx(-250)
+pla1.sety(250)
 #moving player 1
 def movingp1():
+        global distanz
         if runningp1==True:
-            skk.forward(7)
+            pla1.forward(7)
+            distanz = pla1.distance(ob1)
+            if pla1.distance(ob1) <= turtle_size * 2:
+                check_key_pressedp1('l')
             Scr.ontimer(movingp1,50)
+        
 #keybind check player1
 def check_key_pressedp1(key):
     global runningp1
@@ -36,13 +41,13 @@ def check_key_pressedp1(key):
 #keybinds player 1
 Scr.onkey(lambda: check_key_pressedp1('l'),'l')
 Scr.onkey(lambda: check_key_pressedp1('o'),'o')
-Scr.onkey(lambda: skk.setheading(90), 'Up')
-Scr.onkey(lambda: skk.setheading(270), 'Down')
-Scr.onkey(lambda: skk.setheading(0),'Right')
-Scr.onkey(lambda: skk.setheading(180),'Left')
-Scr.onkey(lambda: skk.penup(),'c')
-Scr.onkey(lambda: (skk.pendown(),colorp1()), 'd')
-Scr.onkey(lambda: skk.clear(), 'space')
+Scr.onkey(lambda: pla1.setheading(90), 'Up')
+Scr.onkey(lambda: pla1.setheading(270), 'Down')
+Scr.onkey(lambda: pla1.setheading(0),'Right')
+Scr.onkey(lambda: pla1.setheading(180),'Left')
+Scr.onkey(lambda: pla1.penup(),'c')
+Scr.onkey(lambda: (pla1.pendown(),colorp1()), 'd')
+Scr.onkey(lambda: pla1.clear(), 'space')
 #Hindersin
 ob1 = Turtle(shape="square")
 ob1.color("black")
@@ -96,7 +101,8 @@ color1= ["red","blue","black","green","cyan","magenta"]
 def colorp1():
     random2= "black"
     random2= random.choice(color1)
-    skk.pencolor(random2)
+    pla1.pencolor(random2)
+
 
 
 

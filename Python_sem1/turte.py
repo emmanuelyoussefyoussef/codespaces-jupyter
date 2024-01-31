@@ -25,7 +25,7 @@ def movingp1():
         if runningp1==True:
             pla1.forward(7)
             distanz = pla1.distance(ob1)
-            if pla1.distance(ob1) <= turtle_size * 2:
+            if pla1.distance(ob1) <= turtle_size:
                 check_key_pressedp1('l')
             Scr.ontimer(movingp1,50)
         
@@ -67,8 +67,12 @@ pla2.setx(250)
 pla2.sety(250)
 
 def movingp2():
+        global distanz
         if runningp2==True:
             pla2.forward(7)
+            distanz = pla2.distance(ob1)
+            if pla2.distance(ob1) <= turtle_size:
+                check_key_pressedp2('0')
             Scr.ontimer(movingp2,50)
 
 def check_key_pressedp2(key):

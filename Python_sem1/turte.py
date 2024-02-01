@@ -120,7 +120,17 @@ def colorp1():
     random2= random.choice(color1)
     pla1.pencolor(random2)
 
-
+def zahl_0():
+    pla1.penup()
+    pla1.goto(-50, 100)
+    pla1.pendown()
+    pla1.forward(100)
+    pla1.right(90)
+    pla1.forward(200)
+    pla1.right(90)
+    pla1.forward(100)
+    pla1.right(90)
+    pla1.forward(200)
 
 
 Scr.listen()

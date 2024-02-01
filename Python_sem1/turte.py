@@ -11,6 +11,7 @@ import keyboard
 
 #player 1
 turtle_size=20
+obstacle_size=20
 pla1 = Turtle(shape="turtle", visible=True)
 Scr = Screen()
 Scr.bgcolor("beige")
@@ -28,7 +29,18 @@ def movingp1():
             if pla1.distance(ob1) <= turtle_size:
                 check_key_pressedp1('l')
             Scr.ontimer(movingp1,50)
-        
+            check_collision()
+
+def check_collision():
+    global runningp1, runningp2
+    if pla1.distance(pla2) <= turtle_size:  # Spieler 1 und Spieler 2 berühren sich
+        runningp1 = False
+        runningp2 = False
+    elif pla1.distance(ob1) <= (turtle_size + obstacle_size) or pla2.distance(ob1) <= (turtle_size + obstacle_size):
+        # Spieler 1 oder Spieler 2 berühren das Hindernis
+        runningp1 = False
+        runningp2 = False
+
 #keybind check player1
 def check_key_pressedp1(key):
     global runningp1
@@ -74,6 +86,7 @@ def movingp2():
             if pla2.distance(ob1) <= turtle_size:
                 check_key_pressedp2('0')
             Scr.ontimer(movingp2,50)
+            check_collision()
 
 def check_key_pressedp2(key):
     global runningp2
